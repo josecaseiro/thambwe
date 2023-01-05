@@ -10,6 +10,11 @@ import { BannerComponent } from './view/homepage/banner/banner.component';
 import { ThambweComponent } from './view/homepage/thambwe/thambwe.component';
 import { FonteComponent } from './view/homepage/fonte/fonte.component';
 import { RegionalComponent } from './view/homepage/regional/regional.component';
+import { MusicasComponent } from './view/homepage/musicas/musicas.component';
+import { VideosComponent } from './view/homepage/videos/videos.component';
+import { GaleriaComponent } from './view/homepage/galeria/galeria.component';
+import { MusicosComponent } from './view/homepage/musicos/musicos.component';
+import { RodapeComponent } from './view/rodape/rodape.component';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
@@ -20,7 +25,12 @@ import { RegionalComponent } from './view/homepage/regional/regional.component';
     BannerComponent,
     ThambweComponent,
     FonteComponent,
-    RegionalComponent
+    RegionalComponent,
+    MusicasComponent,
+    VideosComponent,
+    GaleriaComponent,
+    MusicosComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
