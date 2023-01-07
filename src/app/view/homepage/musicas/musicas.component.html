@@ -1,19 +1,29 @@
 <div class="base">
-    <div class="titulos">
-        <h4>
-            Introdução às Músicas Cokwe
-        </h4>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-    </div>
-    <div class="cards">
-        <div class="cards-master" *ngFor="let item of [1,2,3,4,5,6]">
-            <div class="cartao">
-                <img src="../../../../assets/img/play.png" alt="">
-            </div>
-            <h4>Cokwe Music</h4>
+    <div class="container-xxl">
+        <div class="titulos">
+            <h4>
+                Introdução às Músicas Cokwe
+            </h4>
+            <p>
+                Em 1961 e 1967 a Diamang (antiga empresa diamantífera) realizou duas publicações1
+                sobre a música cokwe da região das Lundas. Estas duas publicações tinham associadas
+                11 fitas magnetofónicas com gravações desta rica tradição musical. Com o objetivo de
+                divulgar e dar a conhecer este património apresentamos este acervo musical
+                recuperado pelo projeto Thambwé.
+            </p>
         </div>
-    </div>
-    <div class="botao">
-        <a href="#">Ver Todas</a>
+        <div class="row">
+            <div class="col-12 col-md-2 col-lg-2 cards-master" *ngFor="let item of [1,2,3,4,5,6]">
+                <div>
+                    <div class="cartao">
+                        <img src="../../../../assets/img/play.png" alt="">
+                    </div>
+                    <h4>Cokwe Music</h4>
+                </div>
+            </div>
+        </div>
+        <div class="botao">
+            <a href="/musicas">Ver Todas</a>
+        </div>
     </div>
 </div>

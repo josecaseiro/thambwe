@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +15,7 @@ import { VideosComponent } from './view/homepage/videos/videos.component';
 import { GaleriaComponent } from './view/homepage/galeria/galeria.component';
 import { MusicosComponent } from './view/homepage/musicos/musicos.component';
 import { RodapeComponent } from './view/rodape/rodape.component';
+import { FolcloreComponent } from './view/folclore/folclore.component';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
@@ -30,12 +31,14 @@ import { RodapeComponent } from './view/rodape/rodape.component';
     VideosComponent,
     GaleriaComponent,
     MusicosComponent,
-    RodapeComponent
+    RodapeComponent,
+    FolcloreComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    HttpClientModule,
    // FontAwesomeModule
   ],
   providers: [],
