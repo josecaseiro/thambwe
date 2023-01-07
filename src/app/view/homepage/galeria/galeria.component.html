@@ -7,10 +7,32 @@
             <div class="row">
                 <div class="col-12 col-md-3 col-lg-3 mb-3" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
                     <div>
-                        <img src="../../../../assets/img/Rectangle14.png" alt="" class="img-fluid">
+                        <img (click)="open(content)" src="../../../../assets/img/Rectangle14.png" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div id="slider1" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#slider1" data-slide-to="0" class="active"></li>
+        <li data-target="#slider1" data-slide-to="1"></li>
+        <li data-target="#slider1" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="../../../../assets/img/Rectangle14.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../../../assets/img/Rectangle14.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../../../assets/img/Rectangle14.png" class="d-block w-100" alt="...">
+          </div>
+      </div>
+    </div>
+    
+</ng-template>
