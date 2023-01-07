@@ -1,30 +1,32 @@
 <app-menu></app-menu>
 <div class="base">
-    <div class="procurar">
-        <div class="formControl">
-            <img src="../../../assets/img/shearc.png" alt="">
-            <input type="text" class="form" name="search" placeholder="Pesquisar Músicas">
-        </div>
-    </div>
-    <div class="fitas" *ngFor="let its of [1,2]">
-        <div class="titulo" *ngIf="its==1">
-            <h4>Vol. I. Folclore Musical de Angola. Povo Quioco. Área do Lóvua</h4>
-        </div>
-        <div class="titulo"  *ngIf="its==2">
-            <h4>Vol. II. Folclore Musical de Angola. Povo Quioco. Área do Camissombo</h4>
-        </div>
-        <div *ngFor="let item of [1,2]" class="middle">
-            <div class="control-fita">
-                <h5>. Fita {{item}}</h5>
+    <div class="container-xxl">
+        <div class="procurar">
+            <div class="formControl">
+                <img src="../../../assets/img/shearc.png" alt="">
+                <input type="text" class="form" name="search" placeholder="Pesquisar Músicas">
             </div>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-12 col-md-3 col-md-3" *ngFor="let item of [1,2,3,4]">
-                        <div class="basecontrol">
-                            <div class="cartas">
-                                <img src="../../../assets/img/play.png" alt="">
+        </div>
+        <div class="fitas" *ngFor="let its of [1,2]">
+            <div class="titulo" *ngIf="its==1">
+                <h4>Vol. I. Folclore Musical de Angola. Povo Quioco. Área do Lóvua</h4>
+            </div>
+            <div class="titulo"  *ngIf="its==2">
+                <h4>Vol. II. Folclore Musical de Angola. Povo Quioco. Área do Camissombo</h4>
+            </div>
+            <div *ngFor="let item of [1,2]" class="middle">
+                <div class="control-fita">
+                    <h5>. Fita {{item}}</h5>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-3 col-md-3" *ngFor="let item of [1,2,3,4]">
+                            <div class="basecontrol">
+                                <div class="cartas">
+                                    <img src="../../../assets/img/play.png" alt="">
+                                </div>
+                                <h4>(Qui 154) Mulondo Uá Tenha</h4>
                             </div>
-                            <h4>(Qui 154) Mulondo Uá Tenha</h4>
                         </div>
                     </div>
                 </div>
