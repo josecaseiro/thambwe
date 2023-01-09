@@ -17,6 +17,10 @@
     .vidoes{
         display: flex;
         .cartao{
+            background-image: url(../../../../assets/img/Rectangle14.png), url(../../../../assets/img/base_Preto.png);
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -26,6 +30,44 @@
             margin-left: 39px;
             padding-top: 0;
             padding-bottom: 0;
+        }
+    }
+}
+@media (max-width:764px) {
+    .base{
+        margin-top: 61px;
+        padding-left: 2.7% !important;
+        padding-right: 2.7% !important;
+        .titulo{
+            margin-bottom: 51px;
+            padding-left: 0px !important;
+            text-align: center;
+            h4{
+                font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 35px !important;
+                line-height: 118.5%;
+                color: #000000;
+            }
+        }
+        .vidoes{
+            display: block !important;
+            .cartao{
+                background-image: url(../../../../assets/img/Rectangle14.png), url(../../../../assets/img/base_Preto.png);
+                background-blend-mode: multiply;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100% !important;
+                height: 300px !important;
+                border-radius: 7px;
+                margin-left: 0 !important;
+                padding-top: 0;
+                margin-bottom:10px ;
+            }
         }
     }
 }
