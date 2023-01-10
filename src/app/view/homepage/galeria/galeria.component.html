@@ -5,9 +5,9 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-3 col-lg-3 mb-3" *ngFor="let item of [1,2,3,4,5,6,7,8,9,10,11,12]">
-                    <div>
-                        <img (click)="open(content)" src="../../../../assets/img/Rectangle14.png" alt="" class="img-fluid">
+                <div class="col-12 col-md-3 col-lg-3 mb-3" *ngFor="let item of imagem">
+                    <div class="">
+                        <img (click)="open(content)" src="{{url(item.file)}}" alt="{{item.titulo}}" class="img-fluid imgBase">
                     </div>
                 </div>
             </div>
@@ -17,9 +17,9 @@
 
 <ng-template #content let-modal>
   <ngb-carousel #carousel [interval]="5000" >
-	<ng-template ngbSlide *ngFor="let img of [1,2,3,4,5,6,7,8,9,10,11,12]">
+	<ng-template ngbSlide *ngFor="let img of imagem">
 			<div class="picsum-img-wrapper">
-				<img src="../../../../assets/img/Rectangle14.png" alt="" class="img-fluig">
+				<img (src)="url(img.file)" alt="" class="img-fluig">
 			</div>
 	</ng-template>
 </ngb-carousel>
