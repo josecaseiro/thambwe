@@ -13,7 +13,7 @@ export class GaleriaComponent implements OnInit {
   ngOnInit(): void {
   }
   open(content: any) {
-		this.modalService.open(content, {size: 'xl', ariaLabelledBy: 'modal-basic-title' }).result.then(
+		this.modalService.open(content, {size: 'lg', ariaLabelledBy: 'modal-basic-title' }).result.then(
 			(result) => {
 				this.closeResult = `Closed with: ${result}`;
 			},
