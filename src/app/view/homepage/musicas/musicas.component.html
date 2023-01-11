@@ -14,8 +14,8 @@
         </div>
         <div class="row">
             <div class="col-12 col-md-2 col-lg-2 cards-master" *ngFor="let item of musicas">
-                <div>
-                    <div class="cartao">
+                <div >
+                    <div class="cartao" style="background-image: url('{{fileDown(item.capa)}}'), url(../../../../assets/img/base_Preto.png);  ">
                         <img src="../../../../assets/img/play.png" alt="">
                     </div>
                     <h4>{{item.titulo}}</h4>

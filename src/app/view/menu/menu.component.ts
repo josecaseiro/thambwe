@@ -11,5 +11,9 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  teste: boolean = true
+  desaprecer(valor:boolean){
+    this.teste = valor
+  }
 
 }
