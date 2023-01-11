@@ -16,6 +16,7 @@ import { GaleriaComponent } from './view/homepage/galeria/galeria.component';
 import { MusicosComponent } from './view/homepage/musicos/musicos.component';
 import { RodapeComponent } from './view/rodape/rodape.component';
 import { FolcloreComponent } from './view/folclore/folclore.component';
+import { FormsModule } from '@angular/forms';
 //import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
@@ -39,6 +40,7 @@ import { FolcloreComponent } from './view/folclore/folclore.component';
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
+    FormsModule
    // FontAwesomeModule
   ],
   providers: [],
