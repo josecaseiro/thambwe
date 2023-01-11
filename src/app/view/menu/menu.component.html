@@ -13,16 +13,18 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse " *ngIf="teste" id="navbarID">
-          <ul class="menu-thambwe navbar-nav me-auto ">
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Banner">Thambwé</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Apresentar">Apresentação</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Fonte">Financiamento</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Regional">Múseu</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Musica">Músicas</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Video">Vídeos</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Galeria">Galeria</a></li>
-            <li class="nav-item" (click)="desaprecer(false)"><a class="nav-link" href="#Musico">Músicos</a></li>
-          </ul>
+          <div class="navbar-nav">
+            <ul class="menu-thambwe ">
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Banner">Thambwé</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Apresentar">Apresentação</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Fonte">Financiamento</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Regional">Múseu</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Musica">Músicas</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Video">Vídeos</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Galeria">Galeria</a></li>
+              <li (click)="desaprecer(false)"><a class="nav-link" href="#Musico">Músicos</a></li>
+            </ul>
+          </div>
         </div>
     </div>
 </nav>

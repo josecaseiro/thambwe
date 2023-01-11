@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-12 col-md-3 col-lg-3 mb-3" *ngFor="let item of imagem">
                     <div class="">
-                        <img (click)="open(content)" src="{{url(item.file)}}" alt="{{item.titulo}}" class="img-fluid imgBase">
+                        <img (click)="open(content)" src="{{url(item.file)}}" alt="{{item.titulo}}" style="cursor: pointer;" class="img-fluid imgBase">
                     </div>
                 </div>
             </div>
@@ -19,7 +19,7 @@
   <ngb-carousel #carousel [interval]="5000" >
 	<ng-template ngbSlide *ngFor="let img of imagem">
 			<div class="picsum-img-wrapper">
-				<img (src)="url(img.file)" alt="" class="img-fluig">
+				<img src="{{url(img.file)}}" alt="" >
 			</div>
 	</ng-template>
 </ngb-carousel>
