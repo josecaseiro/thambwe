@@ -9,15 +9,15 @@
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-12 col-md-2 col-lg-2 cawey" *ngFor="let item of [1,2,3,4,5,6]">
+                <div class="col-12 col-md-2 col-lg-2 cawey" *ngFor="let item of musico">
                     <div class="cartao">
                         <div class="text-center">
-                            <img src="../../../../assets/img/ocara.png" alt="">
-                            <h4>José Músico Cokwe</h4>
+                            <img src="{{fileDown(item.file)}}" alt="">
+                            <h4>{{item.autor}}</h4>
                         </div>
                         <div class="conteudo">
                             <p>
-                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                {{item.descricao}}
                             </p>
                         </div>
                     </div>

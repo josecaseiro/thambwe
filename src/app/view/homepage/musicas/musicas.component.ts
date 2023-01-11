@@ -14,12 +14,16 @@ export class MusicasComponent implements OnInit {
   ngOnInit(): void {
     this.allLoad()
   }
+  fileDown(valor:string | null){
+    if(valor == null) return null
+    return environment.fileUrl+valor
+  }
   musicas: Musica[] = [];
   allLoad(){
-    this.http.get<{musica: Musica[]}>(environment.apiUrl + 'musicas').subscribe({
+    this.http.get<{musicas: Musica[]}>(environment.apiUrl + 'musicas/destaque').subscribe({
       next: (res) => {
-        console.log(res)
-        this.musicas = res.musica;
+        this.musicas = res.musicas;
+        //console.log(this.musicas)
       }
     });
   }
