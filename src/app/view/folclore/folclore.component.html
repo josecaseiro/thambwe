@@ -4,7 +4,7 @@
         <div class="procurar">
             <div class="formControl">
                 <img src="../../../assets/img/shearc.png" alt="">
-                <input type="text" class="form" name="search" placeholder="Pesquisar Músicas">
+                <input type="text" (change)="procurar(nome)" class="form" name="nome" [(ngModel)]="nome" placeholder="Pesquisar Músicas">
             </div>
         </div>
         <div class="fitas" *ngFor="let its of [1,2]">
@@ -20,12 +20,12 @@
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-3 col-md-3 controlss" *ngFor="let item of [1,2,3,4]">
+                        <div class="col-12 col-md-3 col-md-3 controlss" *ngFor="let music of musicas">
                             <div class="basecontrol">
-                                <div class="cartas">
+                                <div class="cartas" style="background-image: url('{{fileDown(music.capa)}}'), url(../../../../assets/img/base_Preto.png);  ">
                                     <img src="../../../assets/img/play.png" alt="">
                                 </div>
-                                <h4>(Qui 154) Mulondo Uá Tenha</h4>
+                                <h4>{{music.titulo}}</h4>
                             </div>
                         </div>
                     </div>
