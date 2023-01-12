@@ -27,7 +27,7 @@ proImagem(){
 	this.http.get<{img:Galeria[]}>(environment.apiUrl + 'galeria').subscribe({
 		next: (res)=>{
 			this.imagem = res.img
-			console.log(res.img)
+			//console.log(res.img)
 		}
 	})
 }

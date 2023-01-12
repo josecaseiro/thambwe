@@ -13,6 +13,7 @@ export class MusicasComponent implements OnInit {
 
   ngOnInit(): void {
     this.allLoad()
+    //console.log(this.allLoad())
   }
   fileDown(valor:string | null){
     if(valor == null) return null
@@ -20,10 +21,10 @@ export class MusicasComponent implements OnInit {
   }
   musicas: Musica[] = [];
   allLoad(){
-    this.http.get<{musicas: Musica[]}>(environment.apiUrl + 'musicas/destaque').subscribe({
+    this.http.get<{musicas: Musica[]}>(environment.apiUrl + 'musica/destaque').subscribe({
       next: (res) => {
         this.musicas = res.musicas;
-        //console.log(this.musicas)
+        console.log(this.musicas)
       }
     });
   }
