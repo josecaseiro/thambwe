@@ -37,6 +37,7 @@ export class AudioService {
 
   private index: number = 0;
   private songs: Musica[] = [];
+  public currentMusic: Musica | undefined;
 
   private streamObservable(url: string) {
     return new Observable(observer => {
@@ -93,7 +94,7 @@ export class AudioService {
     this.indexChange.next(index);
 
     this.stop();
-    var path = environment.fileUrl + songs[index].file;
+    var path = environment.streamUrl + songs[index].file;
 
     this.playStream(path).subscribe((events) => {
       const name = (events as Event).type;

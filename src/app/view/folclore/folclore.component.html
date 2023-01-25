@@ -4,28 +4,30 @@
         <div class="procurar">
             <div class="formControl">
                 <img src="../../../assets/img/shearc.png" alt="">
-                <input type="text" (change)="procurar(nome)" class="form" name="nome" [(ngModel)]="nome" placeholder="Pesquisar Músicas">
+                <input type="text" (change)="procurar(nome)" class="form" name="nome" [(ngModel)]="nome"
+                    placeholder="Pesquisar Músicas">
             </div>
         </div>
-        <div class="fitas" *ngFor="let its of [1,2]">
-            <div class="titulo" *ngIf="its==1">
-                <h4>Vol. I. Folclore Musical de Angola. Povo Quioco. Área do Lóvua</h4>
+        <div class="fitas" *ngFor="let volume of volumes">
+
+            <div class="titulo">
+                <h4>{{volume.titulo}}</h4>
             </div>
-            <div class="titulo"  *ngIf="its==2">
-                <h4>Vol. II. Folclore Musical de Angola. Povo Quioco. Área do Camissombo</h4>
-            </div>
-            <div *ngFor="let item of [1,2]" class="middle">
+            <div *ngFor="let fitas of volume.fitas" class="middle">
                 <div class="control-fita">
-                    <h5>. Fita {{item}}</h5>
+                    <h5>. {{fitas.nome}}</h5>
                 </div>
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-12 col-md-3 col-md-3 controlss" *ngFor="let music of musicas">
+                        <div class="col-12 col-md-3 col-md-3 controlss" (click)="playAudio(musica)"
+                            *ngFor="let musica of fitas.musicas">
                             <div class="basecontrol">
-                                <div class="cartas" style="background-image: url('../../../assets/img/musicas.jpeg'), url(../../../../assets/img/base_Preto.png);  ">
-                                    <img src="../../../assets/img/play.png" alt="">
+                                <div class="cartas" [class.cartao-active]="playing?.id == musica.id && !paused"
+                                    style="background-image: url('../../../assets/img/musicas.jpeg'), url(../../../../assets/img/base_Preto.png);  ">
+                                    <img src="{{'../../../../assets/img/' + (playing?.id == musica.id && !paused? 'pause.png' : 'play.png')  }}"
+                                        alt="">
                                 </div>
-                                <h4>{{music.titulo}}</h4>
+                                <h4>{{musica.titulo}}</h4>
                             </div>
                         </div>
                     </div>

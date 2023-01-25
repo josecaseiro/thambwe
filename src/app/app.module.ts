@@ -17,8 +17,6 @@ import { MusicosComponent } from './view/homepage/musicos/musicos.component';
 import { RodapeComponent } from './view/rodape/rodape.component';
 import { FolcloreComponent } from './view/folclore/folclore.component';
 import { FormsModule } from '@angular/forms';
-import { MusicaComponent } from './controllers/musica/musica/musica.component';
-//import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 @NgModule({
   declarations: [
@@ -35,15 +33,14 @@ import { MusicaComponent } from './controllers/musica/musica/musica.component';
     MusicosComponent,
     RodapeComponent,
     FolcloreComponent,
-    MusicaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
-   // FontAwesomeModule
+    FormsModule,
+    // FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
