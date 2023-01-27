@@ -1,44 +1,43 @@
-  <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-white">
-    <div class="container-xxl">
-        <div class="img-log">
-          <a href="/">
-            <img src="../../../assets/img/museu.png" alt="" style="width: 52px; height: 71px;">
-          </a>
-          <a href="/folclore">
-            <img src="../../../assets/img/JRS.png" alt="" style="width: 150px; height: 50px; ">
-          </a>
-        </div>
-        <button class="navbar-toggler" (click)="desaprecer(true)" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarID"
-            aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " *ngIf="teste" id="navbarID">
-          <div class="navbar-nav">
-
-            <ul class="menu-thambwe menu14">
-              <li><a class="nav-link" href="#Banner">Thambwé</a></li>
-              <li><a class="nav-link" href="#Apresentar">Apresentação</a></li>
-              <li><a class="nav-link" href="#Fonte">Financiamento</a></li>
-              <li><a class="nav-link" href="#Regional">Múseu</a></li>
-              <li><a class="nav-link" href="#Musica">Músicas</a></li>
-              <li><a class="nav-link" href="#Video">Vídeos</a></li>
-              <li><a class="nav-link" href="#Galeria">Galeria</a></li>
-              <li><a class="nav-link" href="#Musico">Músicos</a></li>
-            </ul>
-
-            <ul class="menu-thambwe menu12">
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Banner">Thambwé</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Apresentar">Apresentação</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Fonte">Financiamento</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Regional">Múseu</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Musica">Músicas</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Video">Vídeos</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Galeria">Galeria</a></li>
-              <li (click)="desaprecer(false)"><a class="nav-link" href="#Musico">Músicos</a></li>
-            </ul>
-
-          </div>
-        </div>
+<nav class="navbar navbar-expand-sm navbar-light fixed-top bg-white">
+  <div class="container-xxl">
+    <div class="img-log">
+      <a href="/">
+        <img src="../../../assets/img/museu.png" alt="" style="width: 52px; height: 71px;">
+      </a>
+      <a href="/">
+        <img src="../../../assets/img/JRS.png" alt="" style="width: 150px; height: 50px; ">
+      </a>
     </div>
-</nav>
+    <button class="navbar-toggler" (click)="desaprecer(true)" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarID" aria-controls="navbarID" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse " *ngIf="teste" id="navbarID">
+      <div class="navbar-nav">
 
+        <ul class="menu-thambwe menu14">
+          <li><a class="nav-link" href="#Banner">Thambwé</a></li>
+          <li><a class="nav-link" href="#Apresentar">Apresentação</a></li>
+          <li><a class="nav-link" href="#Fonte">Financiamento</a></li>
+          <li><a class="nav-link" href="#Regional">Múseu</a></li>
+          <li><a class="nav-link" href="#Musica">Músicas</a></li>
+          <li><a class="nav-link" href="#Video">Vídeos</a></li>
+          <li><a class="nav-link" href="#Galeria">Galeria</a></li>
+          <li><a class="nav-link" href="#Musico">Músicos</a></li>
+        </ul>
+
+        <ul class="menu-thambwe menu12">
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Banner">Thambwé</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Apresentar">Apresentação</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Fonte">Financiamento</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Regional">Múseu</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Musica">Músicas</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Video">Vídeos</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Galeria">Galeria</a></li>
+          <li (click)="desaprecer(false)"><a class="nav-link" href="#Musico">Músicos</a></li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</nav>
