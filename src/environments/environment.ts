@@ -5,13 +5,13 @@
 export const environment = {
   production: false,
 
-  // apiUrl: 'https://thambwe.ao/admin/api/',
-  // fileUrl: 'https://thambwe.ao/admin/getfile/',
-  // streamUrl: 'https://thambwe.ao/admin/getStream/',
+  apiUrl: 'https://thambwe.ao/admin/api/',
+  fileUrl: 'https://thambwe.ao/admin/getfile/',
+  streamUrl: 'https://thambwe.ao/admin/getStream/',
 
-  apiUrl: 'http://localhost:8000/api/',
-  fileUrl: 'http://localhost:8000/getfile/',
-  streamUrl: 'http://localhost:8000/getStream/',
+  // apiUrl: 'http://localhost:8000/api/',
+  // fileUrl: 'http://localhost:8000/getfile/',
+  // streamUrl: 'http://localhost:8000/getStream/',
 
 };
 
