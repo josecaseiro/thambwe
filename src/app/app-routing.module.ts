@@ -4,7 +4,7 @@ import { FolcloreComponent } from './view/folclore/folclore.component';
 import { HomepageComponent } from './view/homepage/homepage.component';
 
 const routes: Routes = [
-  {path:"", component:HomepageComponent},
+  {path:"", component:FolcloreComponent},
   {path:"musicas", component:FolcloreComponent}
 ];
 
