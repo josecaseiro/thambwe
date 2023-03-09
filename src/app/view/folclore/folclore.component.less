@@ -1,227 +1,144 @@
-.base {
-    padding-left : 6.7%;
-    padding-right: 6.7%;
-    margin-top   : 80px;
-    padding-top  : 100px;
-    margin-bottom: 200px;
 
-    .procurar {
-        padding-top    : 10px;
-        display        : flex;
-        justify-content: center;
+.modulo
+{
+    width: 100%;
+    padding: 0px;
 
-        .formControl {
-            display         : flex;
-            align-items     : center;
-            width           : 1332px;
-            background-color: #F1F1F1;
-            padding         : 0px 21px 0px 21px;
-            border-radius   : 8px;
-            height          : 72px;
+    h3
+    {
+        padding: 1rem 0;
+        font-size: 1rem;
+    }
+    .volume
+    {
+        width: 300px;
+        padding: 1rem 0;
+        cursor: pointer;
+        margin-right: .8rem;
+        display: inline-block;
+        
+        .img
+        {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 5px;
 
-            img {
-                width : 30px;
-                height: 31px;
+            img
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
             }
+        }
 
-            .form {
-                background-color: #F1F1F1;
-                width           : 85%;
-                margin-left     : 12px;
-                border          : none;
-                padding         : 10px;
-                outline         : none;
-            }
-
+        h3
+        {
+            padding: 1rem 0;
+            font-size: 1rem;
         }
     }
+    .itens
+    {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 1rem;
 
-    .fitas {
-        margin-top: 135px;
+        &.musica, &.fita
+        {
+            padding: 0px;
+            div
+            {
+                padding: 0px;
+                background: transparent;
 
-        .titulo {
-            padding-left: 10px;
-
-            h4 {
-                font-family   : 'Poppins';
-                font-style    : normal;
-                font-weight   : 700;
-                font-size     : 30px;
-                line-height   : 44px;
-                letter-spacing: 0.02em;
-                color         : #000000;
-            }
-        }
-
-        .middle {
-            margin-bottom: 50px;
-        }
-
-        .control-fita {
-            margin-top  : 40px;
-            padding-left: 10px;
-
-            h5 {
-                font-family   : 'Poppins';
-                font-style    : normal;
-                font-weight   : 700;
-                font-size     : 22px;
-                line-height   : 44px;
-                letter-spacing: 0.02em;
-                color         : #000000;
-            }
-        }
-
-        .basecontrol {
-            height: auto;
-
-            .cartas {
-                background-image     : url(../../../assets/img/Rectangle32.png), url(../../../assets/img/base_Preto.png);
-                background-blend-mode: multiply;
-                background-repeat    : no-repeat;
-                background-size      : cover;
-                border-radius        : 10px;
-                display              : flex;
-                justify-content      : center;
-                align-items          : center;
-                height               : 217px;
-
-                img {
-                    height: 30px;
-                    width : 30px;
+                h5
+                {
+                    color: #333;
                 }
+            }
+        }
+        &.fitas
+        {
+            div
+            {
+                padding: 0px;
+            }
+        }
 
-                cursor: pointer;
+        div
+        {
+            padding: 1rem;
+            cursor: pointer;
+            border-radius: 3px;
+
+            .img
+            {
+                width: 100%;
+                height: 200px;
+                overflow: hidden;
+                border-radius: 5px;
+    
+                img
+                {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
             }
 
-            .cartas:hover,
-            .cartao-active {
-                background-blend-mode: normal !important;
-            }
-
-
-            h4 {
-                font-family: 'Poppins';
-                font-style : normal;
-                font-weight: 700;
-                font-size  : 16px;
-                line-height: 30px;
-                text-align : center;
-                color      : #000000;
-                text-align : left;
-                margin-top : 8px;
+            h5
+            {
+                padding: 1rem 0;
+                font-size: 1rem;
+                color: #333;
             }
         }
     }
 }
 
-@media (max-width:764px) {
-    .base {
-        padding-left : 2.7% !important;
-        padding-right: 2.7% !important;
-        margin-top   : 80px;
-        padding-top  : 100px;
 
-        .procurar {
-            padding-top    : 10px;
-            display        : flex;
-            justify-content: center;
+.cartas {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 148px;
+}
+.procurar {
+    padding-top    : 10px;
+    display        : flex;
+    justify-content: center;
 
-            .formControl {
-                width           : 100% !important;
-                background-color: #F1F1F1;
-                padding         : 14px 21px 14px 21px;
-                border-radius   : 8px;
+    .formControl {
+        display         : flex;
+        align-items     : center;
+        width           : 1332px;
+        background-color: #F1F1F1;
+        padding         : 0px 21px 0px 21px;
+        border-radius   : 8px;
+        height          : 72px;
 
-                img {
-                    width : 25px;
-                    height: 25px;
-                }
-
-                .form {
-                    background-color: #F1F1F1;
-                    width           : 80% !important;
-                    margin-left     : 12px;
-                    border          : none;
-                    padding         : 10px;
-                    outline         : none;
-                }
-
-            }
+        img {
+            width : 30px;
+            height: 31px;
         }
 
-        .fitas {
-            margin-top: 60px !important;
-
-            .titulo {
-                padding-left: 10px;
-
-                h4 {
-                    font-family   : 'Poppins';
-                    font-style    : normal;
-                    font-weight   : 700;
-                    font-size     : 26px !important;
-                    line-height   : 44px;
-                    letter-spacing: 0.02em;
-                    color         : #000000;
-                }
-            }
-
-            .middle {
-                margin-bottom: 50px;
-            }
-
-            .control-fita {
-                margin-top  : 40px;
-                padding-left: 10px;
-
-                h5 {
-                    font-family   : 'Poppins';
-                    font-style    : normal;
-                    font-weight   : 700;
-                    font-size     : 22px;
-                    line-height   : 44px;
-                    letter-spacing: 0.02em;
-                    color         : #000000;
-                }
-            }
-
-            .controlss {
-                margin-bottom: 50px;
-
-                .basecontrol {
-                    height: 217px;
-
-                    .cartas {
-                        background-image     : url(../../../assets/img/Rectangle32.png), url(../../../assets/img/base_Preto.png);
-                        background-blend-mode: multiply;
-                        background-repeat    : no-repeat;
-                        background-size      : cover;
-                        border-radius        : 10px;
-                        display              : flex;
-                        justify-content      : center;
-                        align-items          : center;
-                        height               : 217px;
-
-                        img {
-                            height: 30px;
-                            width : 30px;
-                        }
-                    }
-
-                    h4 {
-                        font-family: 'Poppins';
-                        font-style : normal;
-                        font-weight: 700;
-                        font-size  : 16px;
-                        line-height: 30px;
-                        text-align : center;
-                        color      : #000000;
-                        text-align : left;
-                        margin-top : 8px;
-                    }
-                }
-            }
+        .form {
+            background-color: #F1F1F1;
+            width           : 85%;
+            margin-left     : 12px;
+            border          : none;
+            padding         : 10px;
+            outline         : none;
         }
+
     }
+}
+.base {
+    padding-left : 6.7%;
+    padding-right: 6.7%;
+    margin-top   : 80px;
+    padding-top  : 3rem;
+    margin-bottom: 200px;
+
 }

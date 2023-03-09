@@ -25,15 +25,18 @@ export class FolcloreComponent implements OnInit {
     return environment.fileUrl + valor
   }
 
+  disco : number = 0;
+  pagina : string = '';
 
+  fitas : any;
+  escolha : any;
+  musica : number = 0;
   volumes: Volume[] = [];
 
   loadVolumes() {
     this.http.get<Volume[]>(environment.apiUrl + 'volumes').subscribe({
       next: (res) => {
         this.volumes = res;
-        console.log(this.volumes);
-
       }
     });
   }
@@ -42,10 +45,20 @@ export class FolcloreComponent implements OnInit {
 
 
   nome: string = ""
-  procurar(nome: string) {
+  procurar(nome: string) {}
 
+  discoSelecao(id: number)
+  {
+    this.pagina = 'fitas';
+    this.escolha = this.volumes[id];
   }
 
+  abrirFita(id: number)
+  {
+    this.pagina = 'musicas';
+    this.fitas = this.escolha.fitas[id];
+    // console.log(this.fitas)
+  }
 
 
   paused = false;

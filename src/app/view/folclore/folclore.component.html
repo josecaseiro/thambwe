@@ -1,39 +1,66 @@
 <app-menu></app-menu>
+
+
+
+
 <div class="base">
     <div class="container-xxl">
         <div class="procurar">
             <div class="formControl">
-                <img src="../../../assets/img/shearc.png" alt="">
+                <img src="
+                ./assets/img/shearc.png" alt="">
                 <input type="text" (change)="procurar(nome)" class="form" name="nome" [(ngModel)]="nome"
                     placeholder="Pesquisar Músicas">
             </div>
         </div>
-        <div class="fitas" *ngFor="let volume of volumes">
 
-            <div class="titulo">
-                <h4>{{volume.titulo}}</h4>
-            </div>
-            <div *ngFor="let fitas of volume.fitas" class="middle">
-                <div class="control-fita">
-                    <h5>. {{fitas.nome}}</h5>
+        <!-- lsita volumes -->
+        <div class="modulo container-fluid" *ngIf="pagina == ''">
+            <div class="volume" (click)="discoSelecao(0)">
+                <div class="img">
+                    <img src="./assets/img/musicas.jpeg" alt="">
                 </div>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-md-3 col-md-3 controlss" (click)="playAudio(musica)"
-                            *ngFor="let musica of fitas.musicas">
-                            <div class="basecontrol">
-                                <div class="cartas" [class.cartao-active]="playing?.id == musica.id && !paused"
-                                    style="background-image: url('../../../assets/img/musicas.jpeg'), url(../../../../assets/img/base_Preto.png);  ">
-                                    <img src="{{'../../../../assets/img/' + (playing?.id == musica.id && !paused? 'pause.png' : 'play.png')  }}"
-                                        alt="">
-                                </div>
-                                <h4>{{musica.titulo}}</h4>
-                            </div>
+                <h3>Volume I</h3>
+            </div>
+            <div class="volume" (click)="discoSelecao(1)">
+                <div class="img">
+                    <img src="./assets/img/musicas.jpeg" alt="">
+                </div>
+                <h3>Volume II</h3>
+            </div>
+        </div>
+
+        <!-- lista fitas  -->
+        <div class="modulo container-fluid" *ngIf="pagina == 'fitas'">
+            <h3>{{ escolha?.titulo }}</h3>
+            <div class="itens fitas">
+                <div *ngFor="let fitas of escolha.fitas; let index = index" (click)="abrirFita(index)">
+                    <div class="img">
+                        <img src="./assets/img/musicas.jpeg" alt="">
+                    </div>
+                    <h5>{{fitas?.nome}}</h5>
+                </div>
+            </div>
+        </div>
+        
+        <!-- lista musicas -->
+        <div class="modulo container" *ngIf="pagina == 'musicas'">
+            <h3>{{ fitas?.nome }}</h3>
+            <div class="itens musica">
+                <div *ngFor="let musica of fitas.musicas; " (click)="playAudio(musica)">
+                    <div class="basecontrol">
+                        <div class="cartas" [class.cartao-active]="playing?.id == musica.id && !paused"
+                            style="background-image: url('./assets/img/musicas.jpeg'), url(./assets/img/base_Preto.png);  ">
+                            <img src="{{'assets/img/' + (playing?.id == musica.id && !paused? 'pause.png' : 'play.png')  }}"
+                                alt="">
                         </div>
+                    <h5>{{musica?.titulo}}</h5>
                     </div>
                 </div>
             </div>
         </div>
+
+
     </div>
-</div>
+</div><!--  -->
 <app-rodape></app-rodape>
