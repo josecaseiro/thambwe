@@ -31,6 +31,13 @@
       justify-content: space-around;
       align-items: center;
 
+      @media (max-width: 1049px){
+         margin-top: 68px;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+      }
+
       &::before
       {
         inset: 0px;
@@ -46,11 +53,32 @@
         width: 240px;
         height: 240px;
         z-index: 1;
+
+        img{
+          height: 100%;
+          width: 100%;
+        }
+
+        @media (max-width: 1049px){
+          width: 220px;
+          height: 220px;
+        }
+
       }
 
       .textcontrol{
         width: 640px;
         z-index: 1;
+
+        @media (max-width: 1049px){
+          text-align: center;
+          padding: 46px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+
          h6{
           font-family: 'Raleway';
           font-style: normal;
@@ -62,6 +90,7 @@
           order: 1;
           align-self: center;
           flex-grow: 0;
+
          }
          h4{
           font-family: 'Montserrat';
@@ -75,6 +104,7 @@
           order: 1;
           align-self: center;
           flex-grow: 0;
+
          }
          p{
           font-family: 'Raleway';
@@ -86,6 +116,7 @@
           flex: none;
           order: 1;
           flex-grow: 0;
+
          }
 
       }
