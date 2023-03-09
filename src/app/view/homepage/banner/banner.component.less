@@ -1,28 +1,57 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
-.fundo-thambwe{
-  width: 100%;
-  background-image: url('../../../../assets/img/Rectangle12.png'), url('../../../../assets/img/base_Preto.png');
-  background-blend-mode: multiply;
-  height: 660px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-top: 70px;
-  .base{
 
-    .ladoImg{
+
+.banner{
+   width: 100%;
+   height: 830px;
+   margin: 0;
+   padding: 0;
+   position: relative;
+
+   .image-fundo{
+      img{
+        width: 100%;
+        height: 830px;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        position: absolute;
+      }
+   }
+
+   .inside-content{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 0 220px;
+      z-index: 1;
       display: flex;
-      justify-content: center;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center;
-      padding-left: 200px;
-      padding-top: 120px;
-    }
-    .texteControl{
-      padding-left: 200px;
-      padding-top: 140px;
-      div{
-        padding-top: 20px;
-        h6{
+
+      &::before
+      {
+        inset: 0px;
+        content: "";
+        height: 100%;
+        width: 100%;
+        display: block;
+        position: absolute;
+        background: rgba(34, 34, 34, 0.548);
+      }
+
+      .img-tambwe{
+        width: 240px;
+        height: 240px;
+        z-index: 1;
+      }
+
+      .textcontrol{
+        width: 640px;
+        z-index: 1;
+         h6{
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 700;
@@ -33,24 +62,21 @@
           order: 1;
           align-self: center;
           flex-grow: 0;
-          img{
-            margin-right: 10px;
-          }
-        }
-        h4{
-            font-family: 'Montserrat';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 44px;
-            line-height: 54px;
-            color: #FFFFFF;
-            text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
-            flex: none;
-            order: 1;
-            align-self: center;
-            flex-grow: 0;
-        }
-        p{
+         }
+         h4{
+          font-family: 'Montserrat';
+          font-style: normal;
+          font-weight: 700;
+          font-size: 44px;
+          line-height: 54px;
+          color: #FFFFFF;
+          text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
+          flex: none;
+          order: 1;
+          align-self: center;
+          flex-grow: 0;
+         }
+         p{
           font-family: 'Raleway';
           font-style: normal;
           font-weight: 400;
@@ -60,134 +86,34 @@
           flex: none;
           order: 1;
           flex-grow: 0;
-        }
+         }
+
       }
-    }
-  }
+   }
 }
+
 .efeito-estranho{
   background: #7F1D1D;
   height: 13px;
   width: 100%;
 }
-.logotipos{
+
+.parceiros{
+  height: 200px;
+  width: 100%;
+  margin-bottom: 4px;
   display: flex;
   justify-content: center;
-  padding-top: 92px;
-  padding-bottom: 90px;
- 
-  .logo{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    .img1{
-      width: 80%;
-      height: 70px;
-    }
-    .img2{
-      height: 56px;
-      margin-left: 18px;
-      margin-top: 10px;
-    }
-  }
-}
+  align-items: center;
 
+  img{
+     height: 66px;
+  }
 
-@media (max-width: 764px) {
-  .fundo-thambwe{
-    width: 100%;
-    background-image: url('../../../../assets/img/Rectangle12.png'), url('../../../../assets/img/base_Preto.png');
-    background-blend-mode: multiply;
-    height: 660px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 70px;
-    .base{
-  
-      .ladoImg{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding-left: 0 !important;
-        img{
-          width: 200px;
-        }
-      }
-      .texteControl{
-        padding-left: 0px !important;
-        padding-top: 0px !important;
-        div{
-          padding-top: 20px;
-          h6{
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 24px;
-            color: #FFFFFF;
-            flex: none;
-            order: 1;
-            align-self: center;
-            flex-grow: 0;
-            img{
-              margin-right: 10px;
-            }
-          }
-          h4{
-              font-family: 'Montserrat';
-              font-style: normal;
-              font-weight: 700;
-              font-size: 24px !important;
-              line-height: 34px;
-              color: #FFFFFF;
-              text-shadow: 0px 2px 0px rgba(34, 34, 34, 0.1);
-              flex: none;
-              order: 1;
-              align-self: center;
-              flex-grow: 0;
-          }
-          p{
-            font-family: 'Raleway';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 15px !important;
-            line-height: 38px;
-            color: #FFFFFF;
-            flex: none;
-            order: 1;
-            flex-grow: 0;
-          }
-        }
-      }
-    }
+  .logo-musickool{
+    height: 50px;
+    width: 180px;
+    margin: 4px 0 0 4px;
   }
-  .efeito-estranho{
-    background: #7F1D1D;
-    height: 13px;
-    width: 100%;
-  }
-  .logotipos{
-    display: flex;
-    justify-content: center;
-    padding-top: 30px !important;
-    padding-bottom: 30px !important;
-    padding-left: 6.7%;
-    padding-right: 6.7%;
-   
-    .logo{
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      .img1{
-        width: 80%;
-        height: 30px;
-      }
-      .img2{
-        height: 26px;
-        margin-left: 18px;
-        margin-top: 5px;
-      }
-    }
-  }
-  
+
 }
