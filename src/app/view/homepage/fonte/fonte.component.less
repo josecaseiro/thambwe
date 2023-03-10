@@ -1,3 +1,104 @@
+
+.page-fonte
+{
+  padding-left: 6.7%;
+  padding-right: 6.7%;
+  margin-top: 139px;
+  margin-bottom: 136px;
+
+  .font-img
+  {
+    position: relative;
+    @media(max-width: 1080px)
+    {
+      margin-block: 2rem;
+      text-align: center;
+    }
+
+  
+    h4{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 3rem;
+        line-height: 118.5%;
+        color: #000000;
+    }
+    .img
+    {
+      position: relative;
+      
+      img
+      {
+        right: 8rem;
+        position: absolute;
+      }
+    }
+    &::after
+    {
+      top: 0px;
+      right: -5px;
+      width: 1px;
+      height: 100%;
+      content: "";
+      display: block;
+      position: absolute;
+      background: #989898;
+
+      @media(max-width: 1080px)
+      {
+        display: none;
+      } 
+    }
+  }
+  .font-descricao
+  {
+    padding: 1rem 0 1rem .5rem;
+
+    @media(max-width: 1080px)
+    {
+      width: 100%;
+    }
+    .conteudo{
+      padding-left: 45px;
+      .sub{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 118.5%;
+        color: #141414;
+      }
+      .pag{
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 139.5%;
+        color: #141414;
+      }
+    }
+  }
+
+  .row
+  {
+    align-items: center;
+
+    @media(max-width: 1080px)
+    {
+      flex-flow: column;
+    }
+  }
+}
+
+.flex-clean
+{
+  @media(max-width: 768px)
+  {
+    flex-flow: column;
+  }
+}
+
 .base{
   padding-left: 6.7%;
   padding-right: 6.7%;
