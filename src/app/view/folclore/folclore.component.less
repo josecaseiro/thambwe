@@ -101,6 +101,15 @@
         display: flex;
         padding: 1rem 0;
         justify-content: center;
+
+        @media (max-width: 426px) {
+            flex-flow: column;
+
+            div
+            {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -110,6 +119,9 @@
     align-items: center;
     display: flex;
     height: 180px;
+    background-repeat: round;
+    background-size: cover;
+    background-position: initial;
 
     img
     {
