@@ -73,4 +73,9 @@ export class FolcloreComponent implements OnInit {
       this.paused = false;
     }
   }
+
+  regresso(pagina : string)
+  {
+    this.pagina =pagina;
+  }
 }
