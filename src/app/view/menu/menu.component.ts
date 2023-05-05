@@ -10,6 +10,7 @@ export class MenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // this.desaprecer(true)
   }
   teste: boolean = true
   desaprecer(valor:boolean){
