@@ -9,6 +9,7 @@
             font-style: normal;
             font-weight: 700;
             font-size: 45px;
+            text-align: center;
             line-height: 118.5%;
             color: #000000;
 
@@ -21,6 +22,8 @@
     }
     .vidoes{
         display: flex;
+        justify-content: center;
+
         width: 100%;
         .cartao{
             background-image: url(../../../../assets/img/Rectangle14.png), url(../../../../assets/img/base_Preto.png);
@@ -75,5 +78,26 @@
                 margin-bottom:10px ;
             }
         }
+    }
+}
+
+
+.web
+{
+    display: block;
+
+    @media (max-width: 625px) 
+    {   
+        display: none!important;
+    }
+}
+
+.mobile
+{
+    display: none;
+
+    @media (max-width: 625px) 
+    {   
+        display: block!important;
     }
 }

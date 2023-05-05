@@ -21,13 +21,17 @@
       </div>
       <div class="col-12 col-md-7 col-lg-7">
         <div class="conteudo">
-         <div class="lado1">
 
-         </div>
-         <div class="lado2">
+          <owl-carousel-o [options]="customOptions">
+            <ng-template carouselSlide>                  
+              <div class="lado1">
 
-         </div>
-        </div>
+              </div>
+            </ng-template>   
+
+            <ng-template carouselSlide> <div class="lado2"></div> </ng-template>
+        </owl-carousel-o>
+    </div>
       </div>
     </div>
   </div>

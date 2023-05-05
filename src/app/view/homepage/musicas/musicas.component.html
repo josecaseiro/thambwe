@@ -13,17 +13,21 @@
             </p>
         </div>
         <div class="row">
-            <div class="col-12 col-md-2 col-lg-2 cards-master" (click)="playAudio(item)"
-                *ngFor="let item of musicas.slice(0, 6)">
-                <div>
-                    <div class="cartao" [class.cartao-active]="playing?.id == item.id && !paused"
-                        style="background-image: url('../../../assets/img/musicas.jpeg'), url(../../../../assets/img/base_Preto.png);  ">
-                        <img src="{{'../../../../assets/img/' + (playing?.id == item.id && !paused? 'pause.png' : 'play.png')  }}"
-                            alt="">
+
+            <owl-carousel-o [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let item of musicas.slice(0, 6)">
+                    <div class="col-12 col-md-9 col-lg-9 cards-master" (click)="playAudio(item)">
+                        <div>
+                            <div class="cartao" [class.cartao-active]="playing?.id == item.id && !paused"
+                                style="background-image: url('../../../assets/img/musicas.jpeg'), url(../../../../assets/img/base_Preto.png);  ">
+                                <img src="{{'../../../../assets/img/' + (playing?.id == item.id && !paused? 'pause.png' : 'play.png')  }}"
+                                    alt="">
+                            </div>
+                            <h4>{{item.titulo}}</h4>
+                        </div>
                     </div>
-                    <h4>{{item.titulo}}</h4>
-                </div>
-            </div>
+                </ng-template>   
+              </owl-carousel-o>
         </div>
         <div class="botao">
             <a href="/musicas">Ver Todas</a>
