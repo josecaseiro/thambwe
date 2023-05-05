@@ -4,9 +4,25 @@
             <h4>Nossos Vídeos</h4>
         </div>
         <div class="vidoes">
-            <div class="cartao" *ngFor="let item of [1,2]">
+            <owl-carousel-o class="mobile" [options]="customOptions">
+                <ng-template carouselSlide *ngFor="let item of [1,2]">                  
+                    <div class="cartao col-6">
+                        <iframe *ngIf="item==1" src="https://www.youtube.com/embed/-6Q1qI8pAzc" style="width: 100%; height: 100%; border-radius: 20px;" frameborder="0">
+                        </iframe>
+
+
+                        <iframe *ngIf="item==2" src="https://www.youtube.com/embed/-UCPWXJ87jA" style="width: 100%; height: 100%; border-radius: 20px;" frameborder="0">
+                        </iframe>
+                    </div>
+                </ng-template>   
+            </owl-carousel-o>
+
+
+            <div class="cartao web col-6"  *ngFor="let item of [1,2]">
                 <iframe *ngIf="item==1" src="https://www.youtube.com/embed/-6Q1qI8pAzc" style="width: 100%; height: 100%; border-radius: 20px;" frameborder="0">
                 </iframe>
+
+
                 <iframe *ngIf="item==2" src="https://www.youtube.com/embed/-UCPWXJ87jA" style="width: 100%; height: 100%; border-radius: 20px;" frameborder="0">
                 </iframe>
             </div>

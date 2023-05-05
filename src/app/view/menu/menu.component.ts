@@ -12,7 +12,7 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
     // this.desaprecer(true)
   }
-  teste: boolean = true
+  teste: boolean = false
   desaprecer(valor:boolean){
     this.teste = valor
   }
