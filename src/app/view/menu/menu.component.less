@@ -1,17 +1,65 @@
 .navbar{
   padding-left: 4.7%;
+
+  @media (max-width: 625px) 
+  {
+    padding: 0px;
+  }
+
   width: 100%;
   .img-log{
     display: flex;
     align-items: center;
-    img{
-      margin-right: 20px;
+
+    a
+    {
+      width: 58px; 
+      height: 79px;
+
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-right: 20px;
+
+        @media (max-width: 625px) 
+        {
+          margin: 0px;
+        }
+      
+      }
+    }
+
+    @media (max-width: 625px) 
+    {
+      a
+      {
+        margin: 0px;
+        display: none;
+
+        &:first-child
+        {
+          display: block;
+
+          img
+          {
+            // width: 80px;
+            // height: 80px;
+          }
+        }
+      }  
     }
   }
   .collapse{
     //display: flex;
     //justify-content: end;
     padding-left: 40px;
+
+    @media (max-width: 625px) 
+    {
+      padding: 0px;
+    }
+  
     .menu14{
       display: inline-flex;
 
@@ -53,6 +101,17 @@
     justify-content: flex-end;
     padding-top: 20px;
     margin-left: 280px;
+
+    @media (max-width: 625px) 
+    {
+      margin: 0px;
+
+      &:last-child
+      {
+        display: none!important;
+      }
+    }
+
     .active{
       border-bottom: 4px solid #000000;
     }
@@ -88,7 +147,7 @@
       //justify-content: end;
       padding-left: 0 !important;
       .menu14{
-        display: none;
+        display: none!important;
       }
       .menu12{
         display: block !important;
@@ -124,3 +183,17 @@
     }
   }
 }
+
+
+// #navbarID
+// {
+//   padding: 0px;
+//   position: relative;
+
+//   .navbar-nav
+//   {
+//     top: 0px;
+//     left: 0px;
+//     position: absolute;
+//   }
+// }

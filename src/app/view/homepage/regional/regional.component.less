@@ -13,16 +13,27 @@
     div{
       .museu{
         width: 46px;
-        height: 43px;
+        height: 46px;
         margin-bottom: 13px;
+        
+        img
+        {
+          object-fit: contain;
+        }
       }
       h4{
         font-family: 'Poppins';
         font-style: normal;
         font-weight: 700;
         font-size: 58px;
-        line-height: 56px;
         color: #000000;
+        line-height: 56px;
+
+        @media (max-width: 625px) 
+        {
+          text-align: center;
+          font-size: 1.56rem!important;
+        }
       }
       .barra{
         display: flex;

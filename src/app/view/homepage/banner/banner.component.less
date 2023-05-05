@@ -1,6 +1,6 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,300;0,400;0,500;0,600;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 
 .banner{
@@ -121,7 +121,7 @@
           @media (max-width: 625px)
           {
             width: 100%;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             line-height: unset;
           }
          }
@@ -162,6 +162,12 @@
   justify-content: center;
   align-items: center;
 
+  @media (max-width: 625px) 
+  {
+    height: unset;
+    margin-block: 2rem;
+  }
+
   img{
      height: 66px;
   }
@@ -170,6 +176,11 @@
     height: 50px;
     width: 180px;
     margin: 4px 0 0 4px;
+
+    @media (max-width: 625px) 
+    {
+     display: inline-block; 
+    }
   }
 
 }
